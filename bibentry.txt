@@ -1,0 +1,9 @@
+% bibentry template for lsst.bib in https://github.com/lsst/lsst-texmf/blob/main/texmf/bibtex/bib/lsst.bib
+
+@DocuShare{SCTR-81,
+   author = { Chuck Claver },
+    title = {TMA Pointing and Tracking Verification},
+     year = 2022,
+    month = Sep,
+   handle = {SCTR-81},
+      url = {https://sctr-81.lsst.io } }
