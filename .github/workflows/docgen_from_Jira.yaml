@@ -58,4 +58,4 @@ jobs:
           LTD_PASSWORD: ${{ secrets.LTD_PASSWORD }}
           LTD_USERNAME: ${{ secrets.LTD_USERNAME }}
         run: |
-          lander --upload --pdf SCTR-81.pdf --lsstdoc SCTR-81.tex --ltd-product sctr-81 --extra-download sctr-81-plan.pdf
+          lander --upload --pdf SCTR-81.pdf --lsstdoc SCTR-81.tex --ltd-product sctr-81 --extra-download SCTR-81-plan.pdf
