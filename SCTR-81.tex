@@ -32,7 +32,7 @@
 \title{LVV-P100: TMA Pointing and Tracking Verification Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
 \date{ 2022-12-19 }
-\author{ Chuck Claver }
+\author{ Holger Drass }
 
 \input{history_and_info.tex}
 
@@ -56,28 +56,32 @@ The most recent change to the document repository was on \vcsDate.
 \label{sect:objectives}
 
  The objective of this test plan is to verify the TMA pointing relative
-offset, repeatability, and accuracy.\\
-We will also verify the TMA tracking range in azimuth and elevation and
-the tracking drift.\\
-In addition to these verifications, we will validate the slew and settle
-time and the tracking jitter.\\
-These validations will be done after UTE has verified them using the TMA
-encoders.\\
-This test plan will utilize a StarTracker and DIMM test setup to perform
-the verification and validations.
+offset, repeatability, and accuracy. We will also verify the TMA
+tracking range in azimuth and elevation and the tracking drift. In
+addition to these verifications, we will validate the slew and settle
+time and the tracking jitter. These validations will be done after UTE
+has verified them using the TMA encoders. This test plan will utilize a
+StarTracker and DIMM test setup to perform the verification and
+validations.
 
 
 
 \subsection{System Overview}
 \label{sect:systemoverview}
 
- The system consists of the StarTracker (two tubes) and the DIMM
-telescope mounted on the TMA.\\
-The StarTracker uses jumbo frames these need to be relayed from the
-Hardware through a dedicated network using the
-cable.\\[2\baselineskip]The control of the TMA is done via CSC
-control.\\
-The Dome control is either controlled through the CSC or manually.
+ \begin{itemize}
+\tightlist
+\item
+  The system consists of the StarTracker (two tubes) and the DIMM
+  telescope mounted on the TMA.
+\item
+  The StarTracker uses jumbo frames these need to be relayed from the
+  Hardware through a dedicated network using the cable.
+\item
+  The control of the TMA is done via CSC control.
+\item
+  The Dome control is either controlled through the CSC or manually.
+\end{itemize}
 
 
 \subsection{Document Overview}
@@ -247,7 +251,7 @@ The personnel involved in the test campaign is shown in the following table.
 \begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
 \hline
 \multicolumn{2}{r}{T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P100}{LVV-P100} owner:} &
-\multicolumn{2}{l}{\textbf{ Chuck Claver } }\\\hline
+\multicolumn{2}{l}{\textbf{ Holger Drass } }\\\hline
 \multicolumn{2}{r}{T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C224}{LVV-C224} owner:} &
 \multicolumn{2}{l}{\textbf{
 Chuck Claver }
