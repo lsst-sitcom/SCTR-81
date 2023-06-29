@@ -2677,58 +2677,9 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-\textbf{Point~the Dome and the TMA}
-
-\begin{itemize}
-\tightlist
-\item
-  Command the Dome to {Pointing 2}⁠ to {-270}⁠deg
-\item
-  Command the TMA to {Pointing 2}⁠ at Az= {{-270}⁠~⁠~}deg, El= {{45}⁠}⁠
-  deg.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The dome starts the movement.\\
-The TMA starts to move.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 4  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the Dome to reach the commanded position.\\
-Wait for the TMA to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome reaches the commanded position.\\
-The \emph{MTDome\_logevent\_azMotion} and
-\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.\\
-The TMA reaches the commanded position.\\
-The \emph{MTMount\_logevent\_azimuthInPosition} and
-\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
-true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 5  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
 \textbf{Image preparation}\\
 If the preparation to take images takes longer than 10sec, do
-repositioning to target Az= {{-270}⁠~⁠} deg, El= {{45}⁠~⁠}deg.
+repositioning to target Az= {{-270}⁠~⁠} deg, El= {{15}⁠~⁠}deg.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2740,7 +2691,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 6  \\ \hline
+Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2758,7 +2709,7 @@ The Dome is stopped.\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 7  \\ \hline
+Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2794,7 +2745,7 @@ The Dome should not move during the observations.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 8  \\ \hline
+Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2812,7 +2763,7 @@ Astrometry.net finds a solution.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 9  \\ \hline
+Step 7  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2830,13 +2781,62 @@ Image quality is sufficient.
 
 \begin{tabular}{p{2cm}}
 \toprule
+Step 8  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point~the Dome and the TMA}
+
+\begin{itemize}
+\tightlist
+\item
+  Command the Dome to {Pointing 2}⁠ to {-270}⁠deg
+\item
+  Command the TMA to {Pointing 2}⁠ at Az= {{-270}⁠~⁠~}deg, El= {{45}⁠}⁠
+  deg.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The dome starts the movement.\\
+The TMA starts to move.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 9  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the Dome to reach the commanded position.\\
+Wait for the TMA to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome reaches the commanded position.\\
+The \emph{MTDome\_logevent\_azMotion} and
+\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.\\
+The TMA reaches the commanded position.\\
+The \emph{MTMount\_logevent\_azimuthInPosition} and
+\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
+true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
 Step 10  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 \textbf{Image preparation}\\
 If the preparation to take images takes longer than 10sec, do
-repositioning to target Az= {{-270}⁠~⁠} deg, El= {{15}⁠~⁠}deg.
+repositioning to target Az= {{-270}⁠~⁠} deg, El= {{45}⁠~⁠}deg.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2849,6 +2849,96 @@ TMA reaches the commanded position.
 \begin{tabular}{p{2cm}}
 \toprule
 Step 11  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Stop the Dome}\\
+Verify that the Dome is stopped so that it does not move during the
+observations.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome is stopped.\\[2\baselineskip]
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 12  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Track position and take images}\\[2\baselineskip]Star tracking
+for 20 synchronized exposures with 5,4,6 seconds for wide, narrow, fast
+cameras.\\[2\baselineskip]or\\[2\baselineskip]Star tracking for 10 min
+and take synchronized exposures with 5,4,6 seconds for wide, narrow,
+fast cameras.\\[2\baselineskip]\textbf{Note:~}Taking 20 images is good
+for pointing evaluation..\\
+Taking images for 10 min is needed for tracking evaluation
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+The Dome should not move during the observations.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The TMA tracks the given position for 10 min, and the cameras take
+  images or 20 images ar take per pointing
+\item
+  A series of images is successfully taken with the StarTracker and can
+  be seen via RubinTV.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Image verification:}\\
+Look at RubinTV and verify that astrometry.net found an astrometric
+solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Astrometry.net finds a solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 14  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 15  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2874,7 +2964,7 @@ The TMA starts to move.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 12  \\ \hline
+Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2897,7 +2987,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 13  \\ \hline
+Step 17  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2910,96 +3000,6 @@ repositioning to target Az= {{-270}⁠~⁠} deg, El= {{85.0}⁠~⁠}deg.
   Expected Result \\
 {\footnotesize
 TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 14  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Stop the Dome}\\
-Verify that the Dome is stopped so that it does not move during the
-observations.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome is stopped.\\[2\baselineskip]
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 15  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Track position and take images}\\[2\baselineskip]Star tracking
-for 20 synchronized exposures with 5,4,6 seconds for wide, narrow, fast
-cameras.\\[2\baselineskip]or\\[2\baselineskip]Star tracking for 10 min
-and take synchronized exposures with 5,4,6 seconds for wide, narrow,
-fast cameras.\\[2\baselineskip]\textbf{Note:~}Taking 20 images is good
-for pointing evaluation..\\
-Taking images for 10 min is needed for tracking evaluation
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Test Data \\
- {\footnotesize
-The Dome should not move during the observations.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  The TMA tracks the given position for 10 min, and the cameras take
-  images or 20 images ar take per pointing
-\item
-  A series of images is successfully taken with the StarTracker and can
-  be seen via RubinTV.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 16  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image verification:}\\
-Look at RubinTV and verify that astrometry.net found an astrometric
-solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Astrometry.net finds a solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 17  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -3027,91 +3027,6 @@ Step 19  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-\textbf{Point~the Dome and the TMA}
-
-\begin{itemize}
-\tightlist
-\item
-  Command the Dome to {Pointing 5}⁠ to {-180}⁠deg
-\item
-  Command the TMA to {Pointing 5}⁠ at Az= {{-180}⁠~⁠~}deg, El=
-  {{85.0}⁠}⁠ deg.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The dome starts the movement.\\
-The TMA starts to move.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 20  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the Dome to reach the commanded position.\\
-Wait for the TMA to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome reaches the commanded position.\\
-The \emph{MTDome\_logevent\_azMotion} and
-\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.\\
-The TMA reaches the commanded position.\\
-The \emph{MTMount\_logevent\_azimuthInPosition} and
-\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
-true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 21  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image preparation}\\
-If the preparation to take images takes longer than 10sec, do
-repositioning to target Az= {{-180}⁠~⁠} deg, El= {{85.0}⁠~⁠}deg.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 22  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Stop the Dome}\\
-Verify that the Dome is stopped so that it does not move during the
-observations.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome is stopped.\\[2\baselineskip]
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 23  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
 \textbf{Track position and take images}\\[2\baselineskip]Star tracking
 for 20 synchronized exposures with 5,4,6 seconds for wide, narrow, fast
 cameras.\\[2\baselineskip]or\\[2\baselineskip]Star tracking for 10 min
@@ -3144,7 +3059,7 @@ The Dome should not move during the observations.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 24  \\ \hline
+Step 20  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3162,7 +3077,7 @@ Astrometry.net finds a solution.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 25  \\ \hline
+Step 21  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3175,6 +3090,91 @@ Offline analysis in test case
   Expected Result \\
 {\footnotesize
 Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 22  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point~the Dome and the TMA}
+
+\begin{itemize}
+\tightlist
+\item
+  Command the Dome to {Pointing 5}⁠ to {-180}⁠deg
+\item
+  Command the TMA to {Pointing 5}⁠ at Az= {{-180}⁠~⁠~}deg, El=
+  {{85.0}⁠}⁠ deg.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The dome starts the movement.\\
+The TMA starts to move.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 23  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the Dome to reach the commanded position.\\
+Wait for the TMA to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome reaches the commanded position.\\
+The \emph{MTDome\_logevent\_azMotion} and
+\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.\\
+The TMA reaches the commanded position.\\
+The \emph{MTMount\_logevent\_azimuthInPosition} and
+\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
+true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 24  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Image preparation}\\
+If the preparation to take images takes longer than 10sec, do
+repositioning to target Az= {{-180}⁠~⁠} deg, El= {{85.0}⁠~⁠}deg.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+TMA reaches the commanded position.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 25  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Stop the Dome}\\
+Verify that the Dome is stopped so that it does not move during the
+observations.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome is stopped.\\[2\baselineskip]
 
 }
 
@@ -3220,6 +3220,42 @@ Step 27  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Image verification:}\\
+Look at RubinTV and verify that astrometry.net found an astrometric
+solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Astrometry.net finds a solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 28  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 29  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point~the Dome and the TMA}
 
 \begin{itemize}
@@ -3242,7 +3278,7 @@ The TMA starts to move.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 28  \\ \hline
+Step 30  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3265,7 +3301,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 29  \\ \hline
+Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3283,7 +3319,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 30  \\ \hline
+Step 32  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3301,7 +3337,7 @@ The Dome is stopped.\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 31  \\ \hline
+Step 33  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3332,42 +3368,6 @@ The Dome should not move during the observations.
   A series of images is successfully taken with the StarTracker and can
   be seen via RubinTV.
 \end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 32  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image verification:}\\
-Look at RubinTV and verify that astrometry.net found an astrometric
-solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Astrometry.net finds a solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 33  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -3395,6 +3395,24 @@ Step 35  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 36  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point~the Dome and the TMA}
 
 \begin{itemize}
@@ -3417,7 +3435,7 @@ The TMA starts to move.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 36  \\ \hline
+Step 37  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3440,7 +3458,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 37  \\ \hline
+Step 38  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3458,7 +3476,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 38  \\ \hline
+Step 39  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3476,7 +3494,7 @@ The Dome is stopped.\\[2\baselineskip]
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 39  \\ \hline
+Step 40  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3512,7 +3530,7 @@ The Dome should not move during the observations.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 40  \\ \hline
+Step 41  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3525,24 +3543,6 @@ solution.
   Expected Result \\
 {\footnotesize
 Astrometry.net finds a solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 41  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -7997,42 +7997,8 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-\textbf{Point} \textbf{the Dome:}\\
-Command the Dome to {Pointing 2}⁠ to {270}⁠
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome starts moving.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 4  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the Dome to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The \emph{MTDome\_logevent\_azMotion} and
-\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 5  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
 \textbf{Point the TMA}\\
-Command the TMA to {Pointing 2}⁠ at {270}⁠ , {45}⁠ .
+Command the TMA to {Pointing 1}⁠ at {270}⁠ , {15}⁠ .
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -8044,7 +8010,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 6  \\ \hline
+Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8062,7 +8028,162 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
+Step 5  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Image preparation}\\
+If the preparation to take images takes longer than 10sec, do
+repositioning to target {{{270}⁠}}, {{{15}⁠~}}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+TMA reaches the commanded position.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 6  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Track position and take images}\\[2\baselineskip]Take a
+StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
+the available:
+
+\begin{itemize}
+\tightlist
+\item
+  Track a position for 10 min and take StarTracker images.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  If time is available: The TMA is tracking a given position for 10 min
+  and taking images.
+\item
+  At least one image is successfully taken with the StarTracker.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
 Step 7  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{On-the-fly Image Quality Check}\\
+While tracking and taking images, check the images on RubinTV for an
+astrometric solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RubinTV is showing an astrometric solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 8  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 9  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point} \textbf{the Dome:}\\
+Command the Dome to {Pointing 2}⁠ to {270}⁠
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome starts moving.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 10  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the Dome to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTDome\_logevent\_azMotion} and
+\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 11  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point the TMA}\\
+Command the TMA to {Pointing 2}⁠ at {270}⁠ , {45}⁠ .
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The TMA starts moving
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 12  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the TMA to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTMount\_logevent\_azimuthInPosition} and
+\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
+true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8080,7 +8201,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 8  \\ \hline
+Step 14  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8111,7 +8232,7 @@ the available:
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 9  \\ \hline
+Step 15  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8129,7 +8250,7 @@ RubinTV is showing an astrometric solution.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 10  \\ \hline
+Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8148,24 +8269,7 @@ Image quality is sufficient.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 11  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Point the TMA}\\
-Command the TMA to {Pointing 1}⁠ at {270}⁠ , {15}⁠ .
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The TMA starts moving
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 12  \\ \hline
+Step 17  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8182,7 +8286,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 13  \\ \hline
+Step 18  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8199,7 +8303,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 14  \\ \hline
+Step 19  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8211,110 +8315,6 @@ Command the TMA to {Pointing 4}⁠ at {270}⁠ , {85}⁠ .
   Expected Result \\
 {\footnotesize
 The TMA starts moving
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 15  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the TMA to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The \emph{MTMount\_logevent\_azimuthInPosition} and
-\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
-true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 16  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image preparation}\\
-If the preparation to take images takes longer than 10sec, do
-repositioning to target {{{270}⁠}}, {{{85}⁠~}}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 17  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Track position and take images}\\[2\baselineskip]Take a
-StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
-the available:
-
-\begin{itemize}
-\tightlist
-\item
-  Track a position for 10 min and take StarTracker images.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  If time is available: The TMA is tracking a given position for 10 min
-  and taking images.
-\item
-  At least one image is successfully taken with the StarTracker.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 18  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{On-the-fly Image Quality Check}\\
-While tracking and taking images, check the images on RubinTV for an
-astrometric solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 19  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -8342,6 +8342,92 @@ Step 21  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Image preparation}\\
+If the preparation to take images takes longer than 10sec, do
+repositioning to target {{{270}⁠}}, {{{85}⁠~}}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+TMA reaches the commanded position.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 22  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Track position and take images}\\[2\baselineskip]Take a
+StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
+the available:
+
+\begin{itemize}
+\tightlist
+\item
+  Track a position for 10 min and take StarTracker images.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  If time is available: The TMA is tracking a given position for 10 min
+  and taking images.
+\item
+  At least one image is successfully taken with the StarTracker.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 23  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{On-the-fly Image Quality Check}\\
+While tracking and taking images, check the images on RubinTV for an
+astrometric solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RubinTV is showing an astrometric solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 24  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 25  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point} \textbf{the Dome:}\\
 Command the Dome to {Pointing 5}⁠ to {180}⁠
 
@@ -8355,7 +8441,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 22  \\ \hline
+Step 26  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8372,7 +8458,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 23  \\ \hline
+Step 27  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8389,7 +8475,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 24  \\ \hline
+Step 28  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8407,7 +8493,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 25  \\ \hline
+Step 29  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8425,7 +8511,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 26  \\ \hline
+Step 30  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8456,7 +8542,7 @@ the available:
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 27  \\ \hline
+Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8474,7 +8560,7 @@ RubinTV is showing an astrometric solution.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 28  \\ \hline
+Step 32  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8493,25 +8579,7 @@ Image quality is sufficient.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 29  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image preparation}\\
-If the preparation to take images takes longer than 10sec, do
-repositioning to target {{{270}⁠}}, {{{15}⁠~}}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 30  \\ \hline
+Step 33  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8528,7 +8596,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 31  \\ \hline
+Step 34  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8545,7 +8613,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 32  \\ \hline
+Step 35  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8562,7 +8630,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 33  \\ \hline
+Step 36  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8580,7 +8648,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 34  \\ \hline
+Step 37  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8593,74 +8661,6 @@ repositioning to target {{{180}⁠}}, {{{45}⁠~}}.
   Expected Result \\
 {\footnotesize
 TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 35  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Track position and take images}\\[2\baselineskip]Take a
-StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
-the available:
-
-\begin{itemize}
-\tightlist
-\item
-  Track a position for 10 min and take StarTracker images.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  If time is available: The TMA is tracking a given position for 10 min
-  and taking images.
-\item
-  At least one image is successfully taken with the StarTracker.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 36  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{On-the-fly Image Quality Check}\\
-While tracking and taking images, check the images on RubinTV for an
-astrometric solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 37  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -8701,6 +8701,43 @@ Step 39  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{On-the-fly Image Quality Check}\\
+While tracking and taking images, check the images on RubinTV for an
+astrometric solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RubinTV is showing an astrometric solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 40  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 41  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point} \textbf{the Dome:}\\
 Command the Dome to {Pointing 8}⁠ to {180}⁠
 
@@ -8714,7 +8751,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 40  \\ \hline
+Step 42  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8731,7 +8768,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 41  \\ \hline
+Step 43  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8748,7 +8785,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 42  \\ \hline
+Step 44  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8766,7 +8803,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 43  \\ \hline
+Step 45  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8784,7 +8821,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 44  \\ \hline
+Step 46  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8810,43 +8847,6 @@ the available:
 \item
   At least one image is successfully taken with the StarTracker.
 \end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 45  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{On-the-fly Image Quality Check}\\
-While tracking and taking images, check the images on RubinTV for an
-astrometric solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 46  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -8874,6 +8874,25 @@ Step 48  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 49  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point} \textbf{the Dome:}\\
 Command the Dome to {Pointing 9}⁠ to {90}⁠
 
@@ -8887,7 +8906,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 49  \\ \hline
+Step 50  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8904,7 +8923,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 50  \\ \hline
+Step 51  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8921,7 +8940,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 51  \\ \hline
+Step 52  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8939,7 +8958,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 52  \\ \hline
+Step 53  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8957,7 +8976,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 53  \\ \hline
+Step 54  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -8988,7 +9007,7 @@ the available:
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 54  \\ \hline
+Step 55  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -9001,25 +9020,6 @@ astrometric solution.
   Expected Result \\
 {\footnotesize
 RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 55  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -12865,42 +12865,8 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-\textbf{Position the dome}\\
-Command the Dome to {Pointing 2}⁠ to {\{Dome AZ\}}⁠
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome starts moving.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 4  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the Dome to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The \emph{MTDome\_logevent\_azMotion} and
-\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 5  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
 \textbf{Point the TMA to (Az, El)-pattern position}\\
-Point the TMA to {Pointing 2}⁠ at {-270}⁠ , {45}⁠ .
+Point the TMA to {Pointing 1}⁠ at {-270}⁠ , {15}⁠ .
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -12912,7 +12878,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 6  \\ \hline
+Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -12930,7 +12896,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 7  \\ \hline
+Step 5  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -12969,7 +12935,176 @@ Step 7  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
+Step 6  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Move TMA to the 1. random distance of 3.5deg}\\
+Point the TMA to a random 3.5 deg combined offset in AZ and EL from
+{Pointing 1}⁠ at {-270}⁠, {15}⁠. Record the exact position of the offset
+in AZ and El.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The TMA reaches the commanded offset position.
+\item
+  The \emph{MTMount\_logevent\_azimuthInPosition} and
+  \emph{MTMount\_logevent\_elevationInPosition}inPosition parameter =
+  true.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 7  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point the TMA to (Az, El)-pattern position + DIMM pattern offset
+\textbf{\textbf{and take DIMM images}}\\
+}
+
+\begin{itemize}
+\tightlist
+\item
+  Point the TMA back to {Pointing 1}⁠ at {-270}⁠ + DIMM offset, {15}⁠ +
+  DIMM offset.
+\item
+  While tracking, take DIMM images with XXXs exposure time and inspect
+  the quality.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  TMA reaches the position.
+\item
+  DIMM image quality is sufficient
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
 Step 8  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Position the dome}\\
+Command the Dome to {Pointing 2}⁠ to {\{Dome AZ\}}⁠
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome starts moving.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 9  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the Dome to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTDome\_logevent\_azMotion} and
+\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 10  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point the TMA to (Az, El)-pattern position}\\
+Point the TMA to {Pointing 2}⁠ at {-270}⁠ , {45}⁠ .
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The TMA starts moving.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 11  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the TMA to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTMount\_logevent\_azimuthInPosition} and
+\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
+true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 12  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Find DIMM Object and DIMM Pattern Offset}\\
+
+\begin{itemize}
+\tightlist
+\item
+  While tracking, take a 10-sec exposure with the StarTracker.
+\item
+  Load the image into an image viewer.
+\item
+  Overlay the GAIA catalog.
+\item
+  Select a star brighter than XXX mag (bright enough for the DIMM).
+\item
+  Calculate the pixel offset between the StarTracker and the DIMM.
+\item
+  Transform the offset into AZ and EL offsets.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  An image was successfully taken with the StarTracker and is of
+  sufficient quality.
+\item
+  AZ and EL offsets are available.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -12996,7 +13131,7 @@ in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 9  \\ \hline
+Step 14  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13030,24 +13165,7 @@ Step 9  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 10  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Point the TMA to (Az, El)-pattern position}\\
-Point the TMA to {Pointing 1}⁠ at {-270}⁠ , {15}⁠ .
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The TMA starts moving.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 11  \\ \hline
+Step 15  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13064,7 +13182,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 12  \\ \hline
+Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13081,7 +13199,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 13  \\ \hline
+Step 17  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13098,7 +13216,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 14  \\ \hline
+Step 18  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13116,7 +13234,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 15  \\ \hline
+Step 19  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13155,7 +13273,7 @@ Step 15  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 16  \\ \hline
+Step 20  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13182,7 +13300,7 @@ in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 17  \\ \hline
+Step 21  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13216,25 +13334,7 @@ Step 17  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 18  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the TMA to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The \emph{MTMount\_logevent\_azimuthInPosition} and
-\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
-true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 19  \\ \hline
+Step 22  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13251,7 +13351,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 20  \\ \hline
+Step 23  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13268,7 +13368,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 21  \\ \hline
+Step 24  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13285,7 +13385,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 22  \\ \hline
+Step 25  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13298,106 +13398,6 @@ Wait for the TMA to reach the commanded position.
 The \emph{MTMount\_logevent\_azimuthInPosition} and
 \emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
 true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 23  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Find DIMM Object and DIMM Pattern Offset}\\
-
-\begin{itemize}
-\tightlist
-\item
-  While tracking, take a 10-sec exposure with the StarTracker.
-\item
-  Load the image into an image viewer.
-\item
-  Overlay the GAIA catalog.
-\item
-  Select a star brighter than XXX mag (bright enough for the DIMM).
-\item
-  Calculate the pixel offset between the StarTracker and the DIMM.
-\item
-  Transform the offset into AZ and EL offsets.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  An image was successfully taken with the StarTracker and is of
-  sufficient quality.
-\item
-  AZ and EL offsets are available.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 24  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Move TMA to the 1. random distance of 3.5deg}\\
-Point the TMA to a random 3.5 deg combined offset in AZ and EL from
-{Pointing 4}⁠ at {-270}⁠, {86.5}⁠. Record the exact position of the
-offset in AZ and El.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  The TMA reaches the commanded offset position.
-\item
-  The \emph{MTMount\_logevent\_azimuthInPosition} and
-  \emph{MTMount\_logevent\_elevationInPosition}inPosition parameter =
-  true.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 25  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Point the TMA to (Az, El)-pattern position + DIMM pattern offset
-\textbf{\textbf{and take DIMM images}}\\
-}
-
-\begin{itemize}
-\tightlist
-\item
-  Point the TMA back to {Pointing 4}⁠ at {-270}⁠ + DIMM offset, {86.5}⁠
-  + DIMM offset.
-\item
-  While tracking, take DIMM images with XXXs exposure time and inspect
-  the quality.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  TMA reaches the position.
-\item
-  DIMM image quality is sufficient
-\end{itemize}
 
 }
 
@@ -13446,6 +13446,67 @@ Step 27  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Move TMA to the 1. random distance of 3.5deg}\\
+Point the TMA to a random 3.5 deg combined offset in AZ and EL from
+{Pointing 4}⁠ at {-270}⁠, {86.5}⁠. Record the exact position of the
+offset in AZ and El.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The TMA reaches the commanded offset position.
+\item
+  The \emph{MTMount\_logevent\_azimuthInPosition} and
+  \emph{MTMount\_logevent\_elevationInPosition}inPosition parameter =
+  true.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 28  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point the TMA to (Az, El)-pattern position + DIMM pattern offset
+\textbf{\textbf{and take DIMM images}}\\
+}
+
+\begin{itemize}
+\tightlist
+\item
+  Point the TMA back to {Pointing 4}⁠ at {-270}⁠ + DIMM offset, {86.5}⁠
+  + DIMM offset.
+\item
+  While tracking, take DIMM images with XXXs exposure time and inspect
+  the quality.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  TMA reaches the position.
+\item
+  DIMM image quality is sufficient
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 29  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Position the dome}\\
 Command the Dome to {Pointing 5}⁠ to {\{Dome AZ\}}⁠
 
@@ -13459,7 +13520,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 28  \\ \hline
+Step 30  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13476,7 +13537,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 29  \\ \hline
+Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13493,7 +13554,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 30  \\ \hline
+Step 32  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13511,7 +13572,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 31  \\ \hline
+Step 33  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13550,7 +13611,7 @@ Step 31  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 32  \\ \hline
+Step 34  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13577,7 +13638,7 @@ offset in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 33  \\ \hline
+Step 35  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13611,7 +13672,7 @@ Step 33  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 34  \\ \hline
+Step 36  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13628,7 +13689,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 35  \\ \hline
+Step 37  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13645,7 +13706,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 36  \\ \hline
+Step 38  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13662,7 +13723,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 37  \\ \hline
+Step 39  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13680,7 +13741,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 38  \\ \hline
+Step 40  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13719,7 +13780,7 @@ Step 38  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 39  \\ \hline
+Step 41  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13746,7 +13807,7 @@ in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 40  \\ \hline
+Step 42  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13780,34 +13841,7 @@ Step 40  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 41  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Move TMA to the 1. random distance of 3.5deg}\\
-Point the TMA to a random 3.5 deg combined offset in AZ and EL from
-{Pointing 1}⁠ at {-270}⁠, {15}⁠. Record the exact position of the offset
-in AZ and El.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  The TMA reaches the commanded offset position.
-\item
-  The \emph{MTMount\_logevent\_azimuthInPosition} and
-  \emph{MTMount\_logevent\_elevationInPosition}inPosition parameter =
-  true.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 42  \\ \hline
+Step 43  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13824,7 +13858,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 43  \\ \hline
+Step 44  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13841,7 +13875,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 44  \\ \hline
+Step 45  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13858,7 +13892,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 45  \\ \hline
+Step 46  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13876,7 +13910,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 46  \\ \hline
+Step 47  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13915,7 +13949,7 @@ Step 46  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 47  \\ \hline
+Step 48  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13942,7 +13976,7 @@ in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 48  \\ \hline
+Step 49  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13976,7 +14010,7 @@ Step 48  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 49  \\ \hline
+Step 50  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -13993,7 +14027,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 50  \\ \hline
+Step 51  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14010,7 +14044,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 51  \\ \hline
+Step 52  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14027,7 +14061,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 52  \\ \hline
+Step 53  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14045,7 +14079,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 53  \\ \hline
+Step 54  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14084,7 +14118,7 @@ Step 53  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 54  \\ \hline
+Step 55  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14111,7 +14145,7 @@ in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 55  \\ \hline
+Step 56  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14145,7 +14179,7 @@ Step 55  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 56  \\ \hline
+Step 57  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14162,7 +14196,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 57  \\ \hline
+Step 58  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14179,7 +14213,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 58  \\ \hline
+Step 59  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14196,7 +14230,7 @@ The TMA starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 59  \\ \hline
+Step 60  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14214,7 +14248,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 60  \\ \hline
+Step 61  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14253,7 +14287,7 @@ Step 60  \\ \hline
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 61  \\ \hline
+Step 62  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -14280,40 +14314,6 @@ in AZ and El.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 62  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Point the TMA to (Az, El)-pattern position + DIMM pattern offset
-\textbf{\textbf{and take DIMM images}}\\
-}
-
-\begin{itemize}
-\tightlist
-\item
-  Point the TMA back to {Pointing 9}⁠ at {-90}⁠ + DIMM offset, {15}⁠ +
-  DIMM offset.
-\item
-  While tracking, take DIMM images with XXXs exposure time and inspect
-  the quality.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  TMA reaches the position.
-\item
-  DIMM image quality is sufficient
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
 Step 63  \\ \hline
 \end{tabular}
  Description \\
@@ -14325,7 +14325,7 @@ Step 63  \\ \hline
 \begin{itemize}
 \tightlist
 \item
-  Point the TMA back to {Pointing 1}⁠ at {-270}⁠ + DIMM offset, {15}⁠ +
+  Point the TMA back to {Pointing 9}⁠ at {-90}⁠ + DIMM offset, {15}⁠ +
   DIMM offset.
 \item
   While tracking, take DIMM images with XXXs exposure time and inspect
@@ -47261,42 +47261,8 @@ Step 3  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-\textbf{Point} \textbf{the Dome:}\\
-Command the Dome to {Pointing 2}⁠ to {-180}⁠
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Dome starts moving.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 4  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the Dome to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The \emph{MTDome\_logevent\_azMotion} and
-\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 5  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
 \textbf{Point the TMA}\\
-Command the TMA to {Pointing 2}⁠ at {-180}⁠ , {45}⁠ .
+Command the TMA to {Pointing 1}⁠ at {270}⁠ , {15}⁠ .
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -47308,7 +47274,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 6  \\ \hline
+Step 4  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47326,7 +47292,162 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
+Step 5  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Image preparation}\\
+If the preparation to take images takes longer than 10sec, do
+repositioning to target {{{270}⁠}}, {{{15}⁠~}}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+TMA reaches the commanded position.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 6  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Track position and take images}\\[2\baselineskip]Take a
+StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
+the available:
+
+\begin{itemize}
+\tightlist
+\item
+  Track a position for 10 min and take StarTracker images.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  If time is available: The TMA is tracking a given position for 10 min
+  and taking images.
+\item
+  At least one image is successfully taken with the StarTracker.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
 Step 7  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{On-the-fly Image Quality Check}\\
+While tracking and taking images, check the images on RubinTV for an
+astrometric solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RubinTV is showing an astrometric solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 8  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 9  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point} \textbf{the Dome:}\\
+Command the Dome to {Pointing 2}⁠ to {-180}⁠
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Dome starts moving.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 10  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the Dome to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTDome\_logevent\_azMotion} and
+\emph{MTDome\_logevent\_elMotion} inPosition parameter = true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 11  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Point the TMA}\\
+Command the TMA to {Pointing 2}⁠ at {-180}⁠ , {45}⁠ .
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The TMA starts moving
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 12  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait for the TMA to reach the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTMount\_logevent\_azimuthInPosition} and
+\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
+true.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47344,7 +47465,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 8  \\ \hline
+Step 14  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47375,7 +47496,7 @@ the available:
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 9  \\ \hline
+Step 15  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47393,7 +47514,7 @@ RubinTV is showing an astrometric solution.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 10  \\ \hline
+Step 16  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47412,24 +47533,7 @@ Image quality is sufficient.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 11  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Point the TMA}\\
-Command the TMA to {Pointing 1}⁠ at {270}⁠ , {15}⁠ .
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The TMA starts moving
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 12  \\ \hline
+Step 17  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47446,7 +47550,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 13  \\ \hline
+Step 18  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47463,7 +47567,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 14  \\ \hline
+Step 19  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47475,110 +47579,6 @@ Command the TMA to {Pointing 4}⁠ at {90}⁠ , {86.5}⁠ .
   Expected Result \\
 {\footnotesize
 The TMA starts moving
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 15  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Wait for the TMA to reach the commanded position.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The \emph{MTMount\_logevent\_azimuthInPosition} and
-\emph{MTMount\_logevent\_elevationInPosition} inPosition parameter =
-true.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 16  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image preparation}\\
-If the preparation to take images takes longer than 10sec, do
-repositioning to target {{{90}⁠}}, {{{86.5}⁠~}}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 17  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Track position and take images}\\[2\baselineskip]Take a
-StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
-the available:
-
-\begin{itemize}
-\tightlist
-\item
-  Track a position for 10 min and take StarTracker images.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  If time is available: The TMA is tracking a given position for 10 min
-  and taking images.
-\item
-  At least one image is successfully taken with the StarTracker.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 18  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{On-the-fly Image Quality Check}\\
-While tracking and taking images, check the images on RubinTV for an
-astrometric solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 19  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -47606,6 +47606,92 @@ Step 21  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Image preparation}\\
+If the preparation to take images takes longer than 10sec, do
+repositioning to target {{{90}⁠}}, {{{86.5}⁠~}}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+TMA reaches the commanded position.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 22  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Track position and take images}\\[2\baselineskip]Take a
+StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
+the available:
+
+\begin{itemize}
+\tightlist
+\item
+  Track a position for 10 min and take StarTracker images.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  If time is available: The TMA is tracking a given position for 10 min
+  and taking images.
+\item
+  At least one image is successfully taken with the StarTracker.
+\end{itemize}
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 23  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{On-the-fly Image Quality Check}\\
+While tracking and taking images, check the images on RubinTV for an
+astrometric solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RubinTV is showing an astrometric solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 24  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 25  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point} \textbf{the Dome:}\\
 Command the Dome to {Pointing 5}⁠ to {-270}⁠
 
@@ -47619,7 +47705,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 22  \\ \hline
+Step 26  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47636,7 +47722,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 23  \\ \hline
+Step 27  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47653,7 +47739,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 24  \\ \hline
+Step 28  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47671,7 +47757,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 25  \\ \hline
+Step 29  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47689,7 +47775,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 26  \\ \hline
+Step 30  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47720,7 +47806,7 @@ the available:
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 27  \\ \hline
+Step 31  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47738,7 +47824,7 @@ RubinTV is showing an astrometric solution.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 28  \\ \hline
+Step 32  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47757,25 +47843,7 @@ Image quality is sufficient.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 29  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Image preparation}\\
-If the preparation to take images takes longer than 10sec, do
-repositioning to target {{{270}⁠}}, {{{15}⁠~}}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 30  \\ \hline
+Step 33  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47792,7 +47860,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 31  \\ \hline
+Step 34  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47809,7 +47877,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 32  \\ \hline
+Step 35  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47826,7 +47894,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 33  \\ \hline
+Step 36  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47844,7 +47912,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 34  \\ \hline
+Step 37  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47857,74 +47925,6 @@ repositioning to target {{{180}⁠}}, {{{45}⁠~}}.
   Expected Result \\
 {\footnotesize
 TMA reaches the commanded position.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 35  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Track position and take images}\\[2\baselineskip]Take a
-StarTracker image with 10s exposure time.\\[2\baselineskip]If the time
-the available:
-
-\begin{itemize}
-\tightlist
-\item
-  Track a position for 10 min and take StarTracker images.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-\begin{itemize}
-\tightlist
-\item
-  If time is available: The TMA is tracking a given position for 10 min
-  and taking images.
-\item
-  At least one image is successfully taken with the StarTracker.
-\end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 36  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{On-the-fly Image Quality Check}\\
-While tracking and taking images, check the images on RubinTV for an
-astrometric solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 37  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -47965,6 +47965,43 @@ Step 39  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{On-the-fly Image Quality Check}\\
+While tracking and taking images, check the images on RubinTV for an
+astrometric solution.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RubinTV is showing an astrometric solution.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 40  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 41  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point} \textbf{the Dome:}\\
 Command the Dome to {Pointing 8}⁠ to {0}⁠
 
@@ -47978,7 +48015,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 40  \\ \hline
+Step 42  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -47995,7 +48032,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 41  \\ \hline
+Step 43  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48012,7 +48049,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 42  \\ \hline
+Step 44  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48030,7 +48067,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 43  \\ \hline
+Step 45  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48048,7 +48085,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 44  \\ \hline
+Step 46  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48074,43 +48111,6 @@ the available:
 \item
   At least one image is successfully taken with the StarTracker.
 \end{itemize}
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 45  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{On-the-fly Image Quality Check}\\
-While tracking and taking images, check the images on RubinTV for an
-astrometric solution.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 46  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
@@ -48138,6 +48138,25 @@ Step 48  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+\textbf{Offline analysis results}\\
+Offline analysis in Test case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
+Says that we do not have sufficient image quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Image quality is sufficient.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 49  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 \textbf{Point} \textbf{the Dome:}\\
 Command the Dome to {Pointing 9}⁠ to {-90}⁠
 
@@ -48151,7 +48170,7 @@ The Dome starts moving.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 49  \\ \hline
+Step 50  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48168,7 +48187,7 @@ The \emph{MTDome\_logevent\_azMotion} and
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 50  \\ \hline
+Step 51  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48185,7 +48204,7 @@ The TMA starts moving
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 51  \\ \hline
+Step 52  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48203,7 +48222,7 @@ true.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 52  \\ \hline
+Step 53  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48221,7 +48240,7 @@ TMA reaches the commanded position.
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 53  \\ \hline
+Step 54  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48252,7 +48271,7 @@ the available:
 
 \begin{tabular}{p{2cm}}
 \toprule
-Step 54  \\ \hline
+Step 55  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -48265,25 +48284,6 @@ astrometric solution.
   Expected Result \\
 {\footnotesize
 RubinTV is showing an astrometric solution.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 55  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Offline analysis results}\\
-Offline analysis in Test case
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T2739}{LVV-T2739}
-Says that we do not have sufficient image quality.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Image quality is sufficient.
 
 }
 
